@@ -1,42 +1,36 @@
 #include<iostream>
+#include"LinkedList.h"
+#include"LinkedList.cpp"
 using namespace std;
-
-template<typename Node_data>
-class Node
-{
-	Node_data data;
-	Node* next;
-};
-
-template<typename LL_data>
-class LinkedList : template<typename Node_data>private Node
-{
-private:
-	Node* head = new Node();
-	Node* tail = head;
-	int length = 0;
-
-
-public:
-	void is_empty();
-
-};
-
-template<typename LL_data>
-void LinkedList<LL_data>::is_empty()
-{
-	if (head == nullptr)
-		return 1;
-	return 0;
-}
 
 int main()
 {
 	LinkedList<int> LL;
-	LL.is_empty();
-	//if (LL.is_empty())
-		cout << 112112;
-	
+
+	cout << "is_empty: ";
+	cout << LL.is_empty();
+	cout << endl;
+
+	LL.append(3);
+	LL.append(5);
+	LL.append(7);
+	LL.append(9);
+	LL.prepend(2);
+	LL.prepend(4);
+	LL.prepend(6);
+	LL.prepend(8);
+
+	cout << "is_empty: ";
+	cout << LL.is_empty() << endl;
+	cout << "front: ";
+	cout << LL.front() << endl;
+	cout << "back: ";
+	cout << LL.back() << endl;
+	cout << "size: ";
+	cout << LL.get_size() << endl;
+
+	LL.output();
+
 
 	return 0;
 }
