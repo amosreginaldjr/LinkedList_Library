@@ -103,9 +103,18 @@ template<typename node_data>
 void LinkedList<node_data>::reverse_data()
 {
 	//make a base case!
-	for (size_t i = 0; i < 10; i++)
+	Node* previous = nullptr;
+	Node* current = head;
+	Node* next = nullptr;
+	while (current) //current != nullptr
 	{
-		tail->next = prev;
-		cout << prev->data;
+		cout << "Gl";
+		next = current->next;
+		current->next = previous;
+		previous = current;
+		current = next;
 	}
+	//left off here: (triggers breakpoint)
+	//https://www.youtube.com/watch?v=O0By4Zq0OFc
+	head = current;
 }
