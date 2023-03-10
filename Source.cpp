@@ -23,14 +23,15 @@ int main()
 	cout << "is_empty: ";
 	cout << LL.is_empty() << endl;
 	cout << "front: ";
-	cout << LL.front() << endl;
+	cout << LL.get_head() << endl;
 	cout << "back: ";
-	cout << LL.back() << endl;
+	cout << LL.get_tail() << endl;
 	cout << "size: ";
 	cout << LL.get_size() << endl;
 
 	LL.output();
 
+	LL.reverse_data();
 
 	return 0;
 }
