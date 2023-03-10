@@ -11,8 +11,7 @@ private:
 	{
 		node_data data;
 		Node* next;
-
-	}/*access_node*/;
+	};
 
 private:
 	Node* head;
@@ -23,11 +22,12 @@ public:
 	LinkedList();
 	~LinkedList();
 	bool is_empty();
-	void append(node_data user_input);
-	void prepend(node_data user_input);
+	void append(node_data user_input); //adds to the tail
+	void prepend(node_data user_input);//adds to the head
 	void output();
 	int get_size();
+	void reverse_data();
 
-	node_data front();
-	node_data back();
+	node_data get_head();
+	node_data get_tail();
 };
