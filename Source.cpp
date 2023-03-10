@@ -32,6 +32,9 @@ int main()
 	LL.output();
 
 	LL.reverse_data();
+	LL.output();
+	LL.output();
+	LL.output();
 
 	return 0;
 }
